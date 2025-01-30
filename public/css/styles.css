@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #abc7ad; /* Light cyan background for freshness */
+}
+
+.navbar {
+    background-color: #388e3c; /* Light teal navbar */
+    padding: 0.1rem 0; /* เพิ่มขนาด navbar ให้ใหญ่ขึ้น */
+}
+
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.1rem; /* เพิ่มขนาดตัวอักษร */
+    margin-right: 1.7rem; /* เพิ่มระยะห่างระหว่างหัวข้อ */
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #ffc107; /* เปลี่ยนสีเมื่อ hover */
+}
+
+.navbar-brand img {
+    width: 150px;  /* ขยายโลโก้ให้กว้าง 200px */
+    height: auto;  /* ความสูงจะปรับตามอัตราส่วน */
+}
+
+.hero {
+    background-image: url('https://via.placeholder.com/1920x600/81c784/ffffff?text=Fresh+Start'); /* Fresh start image */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.features {
+    background-color: #ffffff;
+    padding: 50px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.footer {
+    background-color: #388e3c; /* Fresh green footer */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffc107;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.content-section {
+    padding: 50px 20px;
+}
+
+.content-section:nth-child(even) {
+    background-color: #e8f5e9; /* Light green background for sections */
+}
+
+/* ปรับปุ่ม Login */
+.btn-primary {
+    background-color: #007bff; /* ปุ่มสีฟ้า */
+    border-color: #007bff;
+    font-size: 1.1rem; /* ขยายขนาดตัวอักษร */
+    padding: 10px 20px; /* เพิ่มพื้นที่ในปุ่ม */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #004085;
+}

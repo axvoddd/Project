@@ -1,0 +1,37 @@
+body {
+    background-color: #e8f5e9;
+}
+
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.btn-block {
+    width: 100%; /* ทำให้ปุ่มยาวเต็มความกว้าง */
+    display: block; /* ทำให้ปุ่มอยู่ตรงกลาง */
+    margin: 20px auto 0; /* จัดตำแหน่งให้อยู่ตรงกลาง */
+    padding: 10px; /* เพิ่มระยะห่างภายในปุ่ม */
+    font-size: 18px; /* ขนาดตัวอักษร */
+    border-radius: 5px; /* มุมโค้งของปุ่ม */
+}
+
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
