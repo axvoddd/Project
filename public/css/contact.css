@@ -1,0 +1,92 @@
+/* กำหนดรูปแบบสำหรับหน้า Contact */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #8e663b;
+}
+
+/* กล่องรวมข้อมูลบริษัทและฟอร์มติดต่อ */
+.contact-box {
+    background-color: rgb(244, 224, 133);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ข้อมูลบริษัท */
+.contact-info {
+    padding-right: 15px; /* เพิ่มช่องว่างเล็กน้อย */
+}
+
+.contact-info h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #bb6911;
+}
+
+.contact-info p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.contact-info img {
+    max-width: 150px;
+    margin-top: 20px;
+}
+
+/* ฟอร์มติดต่อ */
+.contact-form {
+    padding-left: 15px; /* เพิ่มช่องว่างเล็กน้อย */
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #bb6911;
+    margin-bottom: 20px;
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.contact-form button {
+    background-color: #a86f33;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+}
+
+.contact-form button:hover {
+    background-color: #dccf77;
+}
+
+/* กำหนดให้คอลัมน์ที่อยู่ในกล่อง contact-box อยู่ในรูปแบบที่ยืดหยุ่น */
+@media (max-width: 767px) {
+    .contact-info, .contact-form {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .contact-info, .contact-form {
+        margin-bottom: 20px;
+    }
+}

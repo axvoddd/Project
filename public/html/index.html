@@ -5,36 +5,63 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eggs Incubator | Guide</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- เพิ่มการใช้ Google Fonts และ Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- เพิ่มลิงก์ Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 <body>
 
-<!-- Navigation Bar -->
+<!-- Small Top Navbar for Language Selection -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark small-navbar">
+    <div class="container">
+        <a class="navbar-brand" href="#">Eggs Incubator</a>
+        <div class="d-flex">
+            <div class="dropdown">
+                <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                    ภาษา
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+                    <li><a class="dropdown-item" href="#">English</a></li>
+                    <li><a class="dropdown-item" href="#">ไทย</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- Main Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
         <a class="navbar-brand" href="#">
-            <img src="/Image/egg01.png" alt="Logo">
+            <img src="/image/Adobe Express - file.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
+            <button class="btn btn-icon">
+                <i class="fas fa-bell"></i> <!-- ไอคอนกระดิ่งจาก Font Awesome -->
+            </button>
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#">หน้าหลัก</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#features">Features</a>
+                    <a class="nav-link" href="#features">คุณสมบัติ</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
+                    <a class="nav-link" href="#">เกี่ยวกับเรา</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="/contact">ติดต่อเรา</a>
                 </li>
                 <li class="nav-item">
-                    <a class="btn btn-primary" href="login.html">Login</a> <!-- เปลี่ยนเป็นปุ่มทึบ -->
+                    <a class="btn btn-primary" href="/login">เข้าสู่ระบบ</a>
                 </li>
             </ul>
         </div>
@@ -43,73 +70,95 @@
 
 <!-- Hero Section -->
 <div class="hero">
-    <h1>Welcome to Our Fresh Start</h1>
-    <p class="lead">Explore new possibilities with our innovative solutions.</p>
+    <div class="container text-center">
+        <h1>ยินดีต้อนรับสู่เว็บไซต์ของเรา</h1>
+    </div>
 </div>
 
-<!-- Features Section -->
+<!-- ปุ่มสมัครสมาชิกที่ด้านล่างของ Hero Section -->
+<div class="text-center mb-5">
+    <a href="/sign_up" class="btn btn-primary btn-lg">ใช้งานระบบ</a>
+    <a href="/working" class="btn btn-primary btn-lg">เริ่มต้นใช้งาน</a>
+</div>
+<!-- เพิ่มปุ่ม "เริ่มต้นใช้งาน" ในหน้า index.html -->
+
 <div id="features" class="container my-5">
-    <div class="features">
-        <h2 class="text-center mb-4">Our Features</h2>
-        <div class="row">
-            <div class="col-md-4 text-center">
-                <i class="bi bi-laptop fs-1 text-success"></i>
-                <h4 class="mt-3">Responsive Design</h4>
-                <p>Our website adapts to all devices with ease.</p>
+    <div class="features-box">
+        <h2 class="text-center mb-4">คุณสมบัติ</h2>
+        <div class="row justify-content-center">
+            <!-- Temperature Monitoring -->
+            <div class="col-md-4 text-center mb-4">
+                <a href="/feature-temperature.html">
+                    <img src="/image/Remove background project.png" alt="Temperature Monitoring" class="feature-img mb-3">
+                </a>                               
+                <h4 class="mt-3">กล้อง</h4>
+                <p>สามารถที่จะดูไข่ที่ทำการฟักภายในเครื่อง</p>
             </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-lightbulb fs-1 text-warning"></i>
-                <h4 class="mt-3">Innovative Ideas</h4>
-                <p>We offer creative solutions for your challenges.</p>
+
+            <!-- Innovative Ideas -->
+            <div class="col-md-4 text-center mb-4">
+                <!-- <a href="/feature-innovation.html"> -->
+                    <img src="/image/Remove background project (3).png" alt="Innovative Ideas" class="feature-img mb-3">
+                <!-- </a> -->
+                <h4 class="mt-3">อูณหภูมิ</h4>
+                <p>สามารถดูอุณหภูมิภายนอกและภายในเครื่องฟักไข่</p>
             </div>
-            <div class="col-md-4 text-center">
-                <i class="bi bi-shield-check fs-1 text-primary"></i>
-                <h4 class="mt-3">Secure & Reliable</h4>
-                <p>Your safety and trust are our top priorities.</p>
+
+            <!-- Secure & Reliable -->
+            <div class="col-md-4 text-center mb-4">
+                <!-- <a href="/feature-security.html"> -->
+                    <img src="/image/Remove background project (2).png" alt="Secure & Reliable" class="feature-img mb-3">
+                <!-- </a> -->
+                <h4 class="mt-3">ความชื้น</h4>
+                <p>สามารถดูความชื้นภายนอกและภายในเครื่องฟักไข่</p>
             </div>
         </div>
     </div>
 </div>
 
+
 <!-- Content Sections -->
 <div class="content-section">
     <div class="container">
-        <h2 class="mb-4">About Our Mission</h2>
-        <p>We are committed to providing innovative and fresh solutions that empower our users and make a positive impact.</p>
+        <h2 class="mb-4">เกี่ยวกับตู้ฟักไข่</h2>
+        <p>เครื่องฟักไข่เป็นอุปกรณ์ที่ใช้ในการฟักไข่ให้เป็นตัวอ่อนโดยไม่ต้องใช้แม่ไก่ เครื่องฟักไข่ทำงานโดยการควบคุมอุณหภูมิ ความชื้น และการหมุนไข่ให้เหมาะสมกับการพัฒนาของตัวอ่อนในไข่</p>
     </div>
 </div>
 
 <div class="content-section">
     <div class="container">
-        <h2 class="mb-4">Our Vision</h2>
-        <p>Our vision is to lead in creating environmentally sustainable and innovative products that inspire change.</p>
+        <h2 class="mb-4">สิ่งที่คาดว่าจะทำ</h2>
+        <p>เราคาดหวังว่าจะทำตู้ฟักไข่อัฉริยะขึ้นมาเป็นรุ่นของตัวเองและสามารถควบคุมผ่านแอปพลิเคชั่นและเว็บไซด์ได้ด้วยเช่นกันจึงเกิดเป็นเว็บที่ไม่เสร็จนี้ออกมาต้องขออภัยผู้ใช้ด้วย</p>
     </div>
 </div>
 
 <div class="content-section">
     <div class="container">
-        <h2 class="mb-4">Our Achievements</h2>
+        <h2 class="mb-4">ผลลัพธ์ของเรา</h2>
         <ul>
-            <li>Winner of the Green Innovation Award 2024</li>
-            <li>Over 2 million users worldwide</li>
-            <li>Partnerships with eco-friendly organizations</li>
+            <li>มีตู้ฟักไข่เป็นของตัวเอง</li>
+            <li>ตู้ฟักไข่สามารถควบคุมผ่านแอปพลิเคชั่นได้</li>
+            <li>สามารถกรอกข้อมูลลงเว็บไซด์นี้ได้</li>
+            <li>มีตเว็บตู้ฟักไข่ที่สามารถดูอุณหภูมิและความชื้นเป็นของตัวเองได้</li>
+            <li>เกิดไอเดียไหม่ๆในการทำเว็บไซต์ แอปพลิเคชั่น ตัวชิ้นงานในอาคตอันใกล้นี้ได้</li>
         </ul>
     </div>
 </div>
 
-<div class="content-section">
-    <div class="container">
-        <h2 class="mb-4">Contact Us</h2>
-        <p>If you have any questions, feel free to reach out to us at contact@company.com or call us at +123 456 7890.</p>
+<!-- Contact Us Section -->
+<div class="content-section bg-light py-5">
+    <div class="container text-center">
+        <h2 class="mb-4">ข้อมูลการติดต่อ</h2>
+        <p>ถ้าคุณมีข้อสงสัยหรือคำถามต้แงการจะถามติดต่อเราได้ที่ <strong>contact@company.com</strong>หรือว่าโทรมาที่เบอร์<strong>+123 456 7890</strong>.</p>
+        <p>พวกเรารอคำติชมและคำถามจากผู้ใช้ทุกคน</p>
     </div>
 </div>
 
 <!-- Footer Section -->
-<footer class="footer">
+<footer class="footer text-center py-4">
     <p>&copy; 2025 Your Company. All rights reserved.</p>
     <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
 </footer>
-
 <!-- Bootstrap Bundle -->
 <script src="./bootstrap/bootstrap.bundle.js"></script>
 </body>

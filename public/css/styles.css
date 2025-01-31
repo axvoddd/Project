@@ -1,76 +1,349 @@
+/* ตั้งค่าเริ่มต้น */
 body {
     font-family: Arial, sans-serif;
-    background-color: #abc7ad; /* Light cyan background for freshness */
+    background-color: #fff6b5; /* สีพื้นหลังเขียวอ่อน */
+    color: #333; /* สีข้อความ */
 }
 
+/* Navbar */
 .navbar {
-    background-color: #388e3c; /* Light teal navbar */
-    padding: 0.1rem 0; /* เพิ่มขนาด navbar ให้ใหญ่ขึ้น */
+    background-color: #cb9a5b; /* สีเขียวเข้ม */
+    padding: 0.5rem 1rem;
 }
 
 .navbar-nav .nav-item .nav-link {
-    font-size: 1.1rem; /* เพิ่มขนาดตัวอักษร */
-    margin-right: 1.7rem; /* เพิ่มระยะห่างระหว่างหัวข้อ */
+    font-size: 1.1rem;
+    margin-right: 0.5rem;
+}
+/* ปรับสไตล์สำหรับปุ่มไอคอนกระดิ่งใน navbar */
+.navbar .btn-icon {
+    font-size: 20px;  /* ขนาดไอคอน */
+    background-color: transparent;  /* ไม่มีพื้นหลัง */
+    border: none;  /* ไม่มีขอบ */
+    color: white;  /* สีของไอคอนเป็นสีขาว */
+    padding: 8px;  /* เพิ่มพื้นที่รอบๆ ไอคอน */
+    cursor: pointer;  /* ให้เป็น pointer เมื่อ hover */
+    margin-left: 0px;  /* ให้ไอคอนอยู่ทางขวาของ navbar */
+}
+
+/* เมื่อ hover ไอคอนกระดิ่ง */
+.navbar .btn-icon:hover {
+    color: #ffcc00;  /* เปลี่ยนสีของไอคอนเป็นสีทองเมื่อ hover */
+}
+
+/* เพิ่มให้ไอคอนกระดิ่งใน navbar อยู่ทางขวา */
+.navbar .navbar-nav {
+    display: flex;
+    justify-content: flex-end;  /* จัดให้ลิงก์ใน navbar อยู่ทางขวา */
+}
+
+.navbar .navbar-nav .nav-item {
+    margin-left: 15px;  /* ระยะห่างระหว่างลิงก์ใน navbar */
 }
 
 .navbar-nav .nav-item .nav-link:hover {
-    color: #ffc107; /* เปลี่ยนสีเมื่อ hover */
+    color: #000000;
 }
 
 .navbar-brand img {
-    width: 150px;  /* ขยายโลโก้ให้กว้าง 200px */
-    height: auto;  /* ความสูงจะปรับตามอัตราส่วน */
+    width: 75px; 
+    height: auto; 
 }
 
+/* ปรับ Navbar สำหรับมือถือ */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .navbar-nav .nav-item {
+        margin-bottom: 10px;
+    }
+
+    .navbar-brand img {
+        width: 120px;
+    }
+}
+
+/* Hero Section */
 .hero {
-    background-image: url('https://via.placeholder.com/1920x600/81c784/ffffff?text=Fresh+Start'); /* Fresh start image */
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 100px 20px;
+    position: relative;
+    animation: backgroundAnimation 10s infinite; /* ปรับเวลาให้เหมาะสมกับ 5 ภาพ */
 }
 
+/* กำหนดภาพพื้นหลังทั้งหมด 5 รูปที่ต้องการเปลี่ยน */
+@keyframes backgroundAnimation {
+    0% {
+        background-image: url('../../image/fb9dbf81-b8f9-4c86-ad6b-efa3a1f0bc6c.jpg');
+    }
+    20% {
+        background-image: url('../../image/hero1.jpg');
+    }
+    35% {
+        background-image: url('../../image/hero2.jpg');
+    }
+    50% {
+        background-image: url('../../image/hero3.jpg'); /* เพิ่มภาพที่ 4 */
+    }
+    65% {
+        background-image: url('../../image/hero4.jpg'); /* เพิ่มภาพที่ 5 */
+    }
+    100% {
+        background-image: url('../../image/fb9dbf81-b8f9-4c86-ad6b-efa3a1f0bc6c.jpg'); /* กลับไปที่ภาพแรก */
+    }
+}
+
+/* ข้อความใน Hero */
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* ปรับสไตล์ปุ่มสมัครสมาชิก */
+.btn-primary {
+    background-color: #ffe7a3;
+    border-color: #8d5d0a;
+    font-size: 1.2rem;
+    padding: 12px 30px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #fcc142;
+    border-color: #ab7627;
+    transform: scale(1.05);
+}
+
+.btn-primary:active {
+    background-color: #ffe96a;
+    border-color: #b5862a;
+}
+
+
+/* ข้อความใน Hero */
+.hero h1 {
+    font-size: 3rem; /* ขนาดใหญ่ขึ้น */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+/* ปรับสไตล์ปุ่มสมัครสมาชิก */
+.btn-primary {
+    background-color: #388e3c;
+    border-color: #388e3c;
+    font-size: 1.2rem;
+    padding: 12px 30px; /* ช่องว่างภายใน */
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* การเคลื่อนไหว */
+}
+
+.btn-primary:hover {
+    background-color: #e7bf6e;
+    border-color: #936921;
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+}
+
+.btn-primary:active {
+    background-color: #ecd95b;
+    border-color: #92751c;
+}
+
+/* เพิ่มการจัดตำแหน่งปุ่มให้ชิดล่าง */
+.text-center {
+    margin-top: 30px;
+}
+
+/* เพิ่มสไตล์สำหรับมือถือ */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem; /* ขนาดตัวอักษรสำหรับมือถือ */
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .btn-primary {
+        font-size: 1rem;
+        padding: 10px 25px;
+    }
+}
+
+
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+/* Features Section */
 .features {
     background-color: #ffffff;
     padding: 50px 20px;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* เพิ่มในไฟล์ styles.css */
+.features-box {
+    background-color: #ffffff; /* สีพื้นหลัง */
+    padding: 30px; /* ช่องว่างภายในกล่อง */
+    border-radius: 10px; /* มุมโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงา */
+    margin-top: -50px; /* เลื่อนกล่องขึ้นให้ใกล้กับ Hero Section */
+    position: relative; /* เพื่อให้สามารถใช้ z-index ได้ */
+    z-index: 1; /* ให้กล่องอยู่เหนือ Hero Section */
+}
 
+/* เพิ่มในไฟล์ styles.css */
+.feature-img {
+    width: 100%; /* ปรับขนาดรูปภาพให้เต็มพื้นที่ */
+    max-width: 300px; /* จำกัดขนาดสูงสุด */
+    height: auto; /* รักษาสัดส่วน */
+    border-radius: 10px; /* มุมโค้งมน */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงาเล็กน้อย */
+    transition: transform 0.3s ease; /* เพิ่มเอฟเฟกต์เมื่อ hover */
+}
+
+.feature-img:hover {
+    transform: scale(1.05); /* ขยายรูปภาพเล็กน้อยเมื่อ hover */
+}
+
+/* Footer */
 .footer {
-    background-color: #388e3c; /* Fresh green footer */
+    background-color: #dea564;
     color: white;
-    padding: 20px 0;
+    padding: 30px 0;
     text-align: center;
 }
 
 .footer a {
     color: #ffc107;
     text-decoration: none;
+    padding: 10px;
 }
 
 .footer a:hover {
     text-decoration: underline;
 }
 
-.content-section {
-    padding: 50px 20px;
-}
-
-.content-section:nth-child(even) {
-    background-color: #e8f5e9; /* Light green background for sections */
-}
-
-/* ปรับปุ่ม Login */
+/* ปรับปุ่มให้เป็นธีมสีเขียว */
 .btn-primary {
-    background-color: #007bff; /* ปุ่มสีฟ้า */
-    border-color: #007bff;
-    font-size: 1.1rem; /* ขยายขนาดตัวอักษร */
-    padding: 10px 20px; /* เพิ่มพื้นที่ในปุ่ม */
+    background-color: #744a1c;
+    border-color: #ad8b35;
+    font-size: 1.1rem;
+    padding: 12px 25px;
 }
 
 .btn-primary:hover {
-    background-color: #0056b3;
-    border-color: #004085;
+    background-color: #d9c855;
+    border-color: #967b28;
+}
+
+/* styles.css */
+
+/* ปรับขนาดของฟอร์มให้คล้ายหน้า login และ signup */
+#workingForm {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* ปรับความกว้างของฟอร์ม */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ปรับหัวข้อของฟอร์ม */
+#workingForm h1 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #343a40;
+    text-align: center;
+}
+
+/* ปรับการแสดงผลของ input */
+#workingForm .form-group input {
+    width: 100%; /* ให้ input ขยายเต็มความกว้างของฟอร์ม */
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+/* ปรับปุ่มให้เหมาะสม */
+#workingForm button {
+    background-color: #b34d12;
+    color: white;
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 4px;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+}
+
+#workingForm button:hover {
+    background-color:ผ #b4a218;
+}
+
+/* ปรับความกว้างและความสวยงามของส่วนตรวจสอบข้อมูล */
+#reviewSection {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* styles.css */
+/* ให้ลักษณะของฟอร์ม */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group select,
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    border: 1px solid #f3d993;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #eabe66;
+    color: rgba(234, 219, 121, 0.848);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #c49332;
 }

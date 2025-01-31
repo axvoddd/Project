@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ติดต่อเรา</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/contact.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="contact-box">
+            <!-- ข้อมูลบริษัทและฟอร์มติดต่อ รวมในกล่องเดียว -->
+            <div class="row">
+                <!-- ข้อมูลบริษัทและช่องทางการติดต่อ -->
+                <div class="col-md-6">
+                    <div class="contact-info">
+                        <h2>ติดต่อเรา</h2>
+                        <p>หากคุณมีคำถามหรือต้องการข้อมูลเพิ่มเติมเกี่ยวกับผลิตภัณฑ์ของเรา คุณสามารถติดต่อเราได้ตามช่องทางด้านล่างนี้:</p>
+                        <ul>
+                            <li><strong>ชื่อบริษัท:</strong> บริษัท เทคโนโลยี จำกัด</li>
+                            <li><strong>อีเมล:</strong> contact@company.com</li>
+                            <li><strong>เบอร์โทร:</strong> +123 456 7890</li>
+                            <li><strong>ที่อยู่:</strong> 123 ถนนสายหลัก กรุงเทพมหานคร</li>
+                        </ul>
+                        <img src="/image/contact_logo.png" alt="Company Logo" class="img-fluid">
+                    </div>
+                </div>
+
+                <!-- ฟอร์มติดต่อ -->
+                <div class="col-md-6">
+                    <div class="contact-form">
+                        <h3>ส่งข้อความถึงเรา</h3>
+                        <form id="contactForm">
+                            <div class="form-group">
+                                <label for="name">ชื่อของคุณ</label>
+                                <input type="text" class="form-control" id="name" placeholder="กรุณากรอกชื่อ">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">อีเมล</label>
+                                <input type="email" class="form-control" id="email" placeholder="กรุณากรอกอีเมล">
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">เบอร์โทร</label>
+                                <input type="text" class="form-control" id="phone" placeholder="กรุณากรอกเบอร์โทร">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">ข้อความของคุณ</label>
+                                <textarea class="form-control" id="message" rows="4" placeholder="กรุณากรอกข้อความ"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">ส่งข้อความ</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="./bootstrap/bootstrap.bundle.js"></script>
+    <!-- Custom JS -->
+    <script src="./js/contact.js"></script>
+</body>
+</html>

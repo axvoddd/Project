@@ -1,27 +1,59 @@
+body {
+    background-color: #8e663b;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #e8f5e9; /* Light background for login page */
-        }
-        .login-container {
-            max-width: 500px;  /* ขยายขนาดคอนเทนเนอร์ */
-            margin: 100px auto;  /* จัดตำแหน่งให้อยู่กลางหน้า */
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        .login-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        .login-footer {
-            text-align: center;
-            margin-top: 20px;
-        }
-        .form-control {
-            font-size: 1.1rem;  /* ขยายขนาดฟอนต์ของช่องกรอก */
-        }
-        .btn {
-            font-size: 1.1rem;  /* ขยายขนาดฟอนต์ของปุ่ม */
-        }
+/* กล่องเข้าสู่ระบบ */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    padding: 30px;
+    background: rgb(244, 224, 133);
+    max-width: 450px;
+    margin: 80px auto;
+}
+
+/* หัวข้อ */
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #592d07;
+}
+
+/* ช่องกรอกข้อมูล */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ปุ่มเข้าสู่ระบบ */
+.btn-primary {
+    background-color: #b66838;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #8e663b;
+}
+
+/* ลิงก์ด้านล่าง */
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}

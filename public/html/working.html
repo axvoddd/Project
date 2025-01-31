@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การทำงาน</title>
+    <link rel="stylesheet" href="/css/styles.css"> <!-- ใช้สไตล์จาก styles.css -->
+</head>
+<body>
+    <!-- working.html -->
+<form id="workingForm">
+    <h1>ข้อมูลการฟักไข่</h1>
+
+    <!-- ส่วนของการเลือกประเภทไข่ -->
+    <div class="form-group">
+        <label for="eggType">เลือกประเภทไข่</label>
+        <select id="eggType" class="form-control">
+            <option value="">เลือกประเภทไข่</option>
+            <option value="chicken">ไข่ไก่</option>
+            <option value="duck">ไข่เป็ด</option>
+            <option value="quail">ไข่ควาย</option>
+            <option value="turkey">ไข่ไก่งวง</option>
+        </select>
+    </div>
+
+    <!-- ส่วนของอุณหภูมิ -->
+    <div class="form-group">
+        <label for="temperature">อุณหภูมิ (°C)</label>
+        <input type="number" class="form-control" id="temperature" placeholder="กรอกอุณหภูมิ">
+    </div>
+
+    <!-- ส่วนของความชื้น -->
+    <div class="form-group">
+        <label for="humidity">ความชื้น (%)</label>
+        <input type="number" class="form-control" id="humidity" placeholder="กรอกความชื้น">
+    </div>
+
+    <!-- ส่วนของเวลาในการกลับไข่ -->
+    <div class="form-group">
+        <label for="turningTime">เวลาในการกลับไข่ (ชั่วโมง)</label>
+        <input type="number" class="form-control" id="turningTime" placeholder="กรอกเวลาการกลับไข่">
+    </div>
+
+    <!-- ส่วนของความเร็วในการกลับไข่ -->
+    <div class="form-group">
+        <label for="turningSpeed">ความเร็วในการกลับไข่ (วินาที)</label>
+        <input type="number" class="form-control" id="turningSpeed" placeholder="กรอกความเร็วในการกลับไข่">
+    </div>
+
+    <!-- วันที่ลงฟักไข่ -->
+    <div class="form-group">
+        <label for="startDate">วันที่ลงฟักไข่</label>
+        <input type="date" class="form-control" id="startDate">
+    </div>
+
+    <!-- จำนวนไข่ที่ต้องการฟัก -->
+    <div class="form-group">
+        <label for="eggCount">จำนวนไข่</label>
+        <input type="number" class="form-control" id="eggCount" placeholder="กรอกจำนวนไข่">
+    </div>
+
+    <button type="submit" class="btn btn-primary">ส่งข้อมูล</button>
+</form>
+
+
+    <script src="/js/working.js"></script> <!-- ใช้ JavaScript ที่จะทำการตรวจสอบ -->
+</body>
+</html>

@@ -1,0 +1,59 @@
+body {
+    background-color: #8e663b;
+}
+
+/* กล่องสมัครสมาชิก */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0);
+    padding: 30px;
+    background: rgb(244, 224, 133);
+    max-width: 450px;
+    margin: 80px auto;
+}
+
+/* หัวข้อ */
+.card-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #592d07;
+}
+
+/* ช่องกรอกข้อมูล */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    font-size: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* ปุ่มสมัครสมาชิก */
+.btn-primary {
+    background-color: #b66838; /* เปลี่ยนสีให้เหมือนกับหน้า Login */
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #8e663b; /* สีเมื่อ hover */
+}
+
+/* ลิงก์ด้านล่าง */
+.text-center a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
