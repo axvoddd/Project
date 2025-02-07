@@ -13,7 +13,7 @@
 <h1>ขอบคุณครับ/ขอบคุณค่ะ</h1>
 การเชื่อมฐานข้อมูล และ build project
 1.create database name project_egg
-2.import project_egg to root database 
+2.import project_egg to root database Mysql
 3.set database connection int.env file database name=root username= project_egg password=root port=3001
 4.npm --watch server.js
 5.npm i cookkie-parser
