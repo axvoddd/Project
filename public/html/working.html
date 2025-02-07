@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>การทำงาน</title>
-    <link rel="stylesheet" href="/css/styles.css"> <!-- ใช้สไตล์จาก styles.css -->
+    <link rel="stylesheet" href="../css/styles.css"> <!-- ใช้สไตล์จาก styles.css -->
 </head>
 <body>
     <!-- working.html -->
@@ -18,8 +18,8 @@
             <option value="">เลือกประเภทไข่</option>
             <option value="chicken">ไข่ไก่</option>
             <option value="duck">ไข่เป็ด</option>
-            <option value="quail">ไข่ควาย</option>
-            <option value="turkey">ไข่ไก่งวง</option>
+            <option value="quail">ไข่นกยูง</option>
+            <option value="turkey">ไข่นกทระทา</option>
         </select>
     </div>
 
@@ -37,14 +37,9 @@
 
     <!-- ส่วนของเวลาในการกลับไข่ -->
     <div class="form-group">
-        <label for="turningTime">เวลาในการกลับไข่ (ชั่วโมง)</label>
-        <input type="number" class="form-control" id="turningTime" placeholder="กรอกเวลาการกลับไข่">
-    </div>
-
-    <!-- ส่วนของความเร็วในการกลับไข่ -->
-    <div class="form-group">
-        <label for="turningSpeed">ความเร็วในการกลับไข่ (วินาที)</label>
-        <input type="number" class="form-control" id="turningSpeed" placeholder="กรอกความเร็วในการกลับไข่">
+        <label for="turningTime">เวลาในการกลับไข่ (นาที)</label>
+        <input type="number" class="form-control" id="turningTime" placeholder="กรอกเวลาการกลับไข่" min="0">
+        
     </div>
 
     <!-- วันที่ลงฟักไข่ -->
@@ -63,6 +58,6 @@
 </form>
 
 
-    <script src="/js/working.js"></script> <!-- ใช้ JavaScript ที่จะทำการตรวจสอบ -->
+    <script src="../js/working.js"></script> <!-- ใช้ JavaScript ที่จะทำการตรวจสอบ -->
 </body>
 </html>

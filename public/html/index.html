@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eggs Incubator | Guide</title>
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="../bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/styles.css">
 
     <!-- เพิ่มการใช้ Google Fonts และ Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -16,23 +16,7 @@
 </head>
 <body>
 
-<!-- Small Top Navbar for Language Selection -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark small-navbar">
-    <div class="container">
-        <a class="navbar-brand" href="#">Eggs Incubator</a>
-        <div class="d-flex">
-            <div class="dropdown">
-                <button class="btn btn-light dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-                    ภาษา
-                </button>
-                <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                    <li><a class="dropdown-item" href="#">English</a></li>
-                    <li><a class="dropdown-item" href="#">ไทย</a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</nav>
+
 
 <!-- Main Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-dark">
@@ -76,11 +60,19 @@
 </div>
 
 <!-- ปุ่มสมัครสมาชิกที่ด้านล่างของ Hero Section -->
-<div class="text-center mb-5">
+<!-- <div class="text-center mb-5">
     <a href="/sign_up" class="btn btn-primary btn-lg">ใช้งานระบบ</a>
     <a href="/working" class="btn btn-primary btn-lg">เริ่มต้นใช้งาน</a>
-</div>
+</div> -->
 <!-- เพิ่มปุ่ม "เริ่มต้นใช้งาน" ในหน้า index.html -->
+<div class="text-center mb-5">
+    <a href="/sign_up">
+        <img src="../image/start1.png" alt="เริ่มต้นใช้งาน" class="start-img ">
+    </a>    
+    <a href="/working">
+        <img src="../image/start2.png" alt="ใช้งานระบบ" class="start-img mb-4">
+    </a>
+</div>
 
 <div id="features" class="container my-5">
     <div class="features-box">
