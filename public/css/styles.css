@@ -88,13 +88,13 @@ body {
     20% {
         background-image: url('../../image/hero1.jpg');
     }
-    35% {
+    40% {
         background-image: url('../../image/hero2.jpg');
     }
-    50% {
+    60% {
         background-image: url('../../image/hero3.jpg'); /* เพิ่มภาพที่ 4 */
     }
-    65% {
+    80% {
         background-image: url('../../image/hero4.jpg'); /* เพิ่มภาพที่ 5 */
     }
     100% {

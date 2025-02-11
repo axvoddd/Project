@@ -4,25 +4,33 @@ const app = express();
 const cookie = require('cookie-parser')
 const mysql = require('mysql2');
 
+require('dotenv').config({path: __dirname + "/.env"})  
 
-
-const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  password: 'root',
-  database: 'project_egg'
+const db = mysql.createPool({
+  user: process.env.DB_USER,
+  host: process.env.DB_HOST,
+  database: process.env.DB_NAME,
+  password: process.env.DB_PASSWORD,
+  port: 3306,
 });
 
-db.connect((err) => {
-  if (err) throw err;
-    console.log('Connected to MySQL Database!');
-  
-  // Example query
-  // connection.query('SELECT * FROM project_egg.member', (err, results, fields) => {
-  //   if (err) throw err;
-  //   console.log(results);
-  // });
-});
+db.query('select * from eggsql.egg',(err,res) =>{
+  if(err)
+    console.log(err)
+  else
+    console.log(res)
+})
+// db.connect((err) => {
+//   if (err)
+//     console.log(err)
+//   else 
+//     console.log('Connected to MySQL Database!');
+//   // Example query
+//   // connection.query('SELECT * FROM project_egg.member', (err, results, fields) => {
+//   //   if (err) throw err;
+//   //   console.log(results);
+//   // });
+// });
 // ตั้งค่าให้เสิร์ฟไฟล์ static จากโฟลเดอร์ public
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true })); // รองรับ form data
@@ -77,6 +85,8 @@ app.post('/egg_data' , (req,res) =>{
 app.post('/verify', (req, res) => {
   console.log('verifyyyyyy')
   const { username, password } = req.body;
+  console.log(username)
+  console.log(password)
 
     const sql = 'SELECT * FROM member WHERE username = ? and password = ?';
     db.query(sql, [username,password], (error, results) => {
@@ -135,9 +145,11 @@ app.get('/html/index', isAuthenticated, (req, res) => {
 
 app.get('/login',(req,res) => {
   const username = req.cookies.username
+  console.log(username)
   if(username){
       res.redirect('/html/index.html')
   }
   else
       res.render('html/login.html')  
 })
+
